@@ -79,17 +79,3 @@ void input (){
 
 
 
-/*
-    switch(random){
-        case 1:
-        cout << "Computer's Choice: Rock" << endl;
-       break;
-
-        case 2:
-        cout << "Computer's Choice: Paper" << endl;
-        break;
-
-        case 3:
-        cout << "Computer's Choice: Scissors" << endl;
-        break; 
-    } */
