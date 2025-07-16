@@ -14,6 +14,7 @@ int player=0;
 int computer=0;
 char Bob;
 int input;
+int num=0;
 
 int main(){
      cout << "*****************************************************************************" << endl;
@@ -62,8 +63,12 @@ void balling(){
                int Cfscore = computer - random;
              cout << "Computer's Out!!" << endl;
              cout << "Computer's Final Score is: " << Cfscore << "\n" << endl;
+             num = num+2;
            }
-           batting();
+           if(num == 2){
+              batting();
+              }
+           
            }
            
         }while(random != input);
@@ -79,6 +84,8 @@ void batting(){
          random = random % 10 + 1;
            cout << "Choose your number: " << endl;
            cin >> input ;
+          
+          
            if(input > 9){
             cout << "Please enter a number from 0-9!!" << endl;
            }
@@ -86,16 +93,24 @@ void batting(){
            player = player + input;
            cout << "Computer's Number: " << random << endl;
            cout << "Your Score is: " << player << endl;
+           
+           
            if(random == input){
-               int finalscore = player - input;
+            int finalscore = player - input;
             cout << "You're Out!!" << endl;
             cout << "Your Final Score is: " << finalscore << "\n" << endl;
+            num++;
+            
+            
+            if(num == 1){
             balling();
+               }
              }
            }
-           
         }while(random != input);
 }
+
+
 
 
 
