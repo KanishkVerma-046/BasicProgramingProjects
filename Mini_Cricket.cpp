@@ -15,6 +15,8 @@ int computer=0;
 char Bob;
 int input;
 int num=0;
+int Cfscore;
+int finalscore;
 
 int main(){
      cout << "*****************************************************************************" << endl;
@@ -60,14 +62,25 @@ void balling(){
              computer = computer + random;
              cout << "Computer's Score is: " << computer << endl;
              if(random == input){
-               int Cfscore = computer - random;
+                Cfscore = computer - random;
              cout << "Computer's Out!!" << endl;
              cout << "Computer's Final Score is: " << Cfscore << "\n" << endl;
              num = num+2;
            }
            if(num == 2){
               batting();
+              if(Cfscore > finalscore){
+                cout << "You lost the match" << endl;
               }
+              else if (Cfscore == finalscore) {
+                  cout << "It's a tie" << endl;
+                }
+                else {
+                  cout << "You won the match!!" << endl;
+                }
+              
+              }
+              
            
            }
            
@@ -96,7 +109,7 @@ void batting(){
            
            
            if(random == input){
-            int finalscore = player - input;
+            finalscore = player - input;
             cout << "You're Out!!" << endl;
             cout << "Your Final Score is: " << finalscore << "\n" << endl;
             num++;
@@ -104,6 +117,14 @@ void batting(){
             
             if(num == 1){
             balling();
+              if(Cfscore > finalscore){
+                cout << "You lost the match" << endl;
+              }
+                else if (Cfscore == finalscore) {
+                  cout << "It's a tie" << endl;
+                }
+                else cout << "You won the match!!" << endl;
+
                }
              }
            }
